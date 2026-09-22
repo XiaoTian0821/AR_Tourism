@@ -6,6 +6,8 @@
 $page_title = 'AR Hotspot Editor';
 $body_class = 'admin-hotspot-editor';
 
+// require_once __DIR__ . '/../../includes/functions.php';
+require_once __DIR__ . '/../../includes/auth.php';
 require_once __DIR__ . '/../../includes/functions.php';
 requireAdmin();
 
@@ -241,9 +243,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         
                         <!-- Poster Preview with Hotspots -->
                         <div class="hotspot-editor-container text-center" style="background: #f8f9fa; padding: 1rem; border-radius: 10px;">
-                            <?php if ($poster['poster_image']): ?>
+                            <?php if ($poster['poster_image'] && file_exists(UPLOAD_PATH . 'ar-posters/' . basename($poster['poster_image']))): ?>
                                 <div class="hotspot-editor" id="hotspotEditor" style="position: relative; display: inline-block; max-width: 100%;">
-                                    <img src="../../assets/uploads/ar-posters/<?php echo e($poster['poster_image']); ?>" 
+                                    <img src="../../assets/uploads/ar-posters/<?php echo rawurlencode(basename($poster['poster_image'])); ?>" 
                                          id="posterImage" alt="<?php echo e($poster['name']); ?>"
                                          style="max-width: 100%; height: auto; display: block;">
                                     
@@ -505,7 +507,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Save all hotspots
         function saveHotspots() {
             // Trigger form submission to save all
-            document.getElementById('hotspotPropertiesForm').submit();
+            const form = document.getElementById('hotspotPropertiesForm');
+            if (!form) {
+                alert('Add a hotspot before saving.');
+                return;
+            }
+
+            form.submit();
         }
         
         // Click on marker to select
