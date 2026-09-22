@@ -88,7 +88,6 @@
                             <a class="nav-link" href="<?php echo APP_URL; ?>/admin/login.php">
                                 <i class="fas fa-sign-in-alt me-1"></i> Admin
                             </a>
-                            require_once __DIR__ . '/functions.php';
                         </li>
                     <?php endif; ?>
                 </ul>

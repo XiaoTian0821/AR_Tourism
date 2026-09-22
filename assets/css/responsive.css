@@ -1,0 +1,122 @@
+/**
+ * AR Tourism Explorer - Responsive Styles
+ */
+
+/* Mobile First Base */
+@media (max-width: 767.98px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    .card-img-top {
+        height: 180px;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .navbar {
+        padding: 1rem 0;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer,
+    .back-to-top {
+        display: none;
+    }
+    
+    .main-content {
+        padding-top: 0;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High Contrast */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #006400;
+        --text-color: #000;
+        --border-color: #000;
+    }
+}
+
+/* Touch-friendly targets */
+@media (hover: none) and (pointer: coarse) {
+    .nav-link,
+    .btn,
+    .category-pill {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    a,
+    button {
+        touch-action: manipulation;
+    }
+}
