@@ -5,6 +5,8 @@
 $page_title = 'Dashboard';
 $body_class = 'admin-dashboard';
 
+// require_once __DIR__ . '/../includes/functions.php';
+require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/functions.php';
 requireAdmin();
 
@@ -74,7 +76,7 @@ $recentPosters = getRecentContent('posters', 5);
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Hotspots</span>
                 </a>
-                <a href="ar-targets/index.php" class="nav-link">
+                <a href="ar-posters/index.php" class="nav-link">
                     <i class="fas fa-cube"></i>
                     <span>Target Compilation</span>
                 </a>
