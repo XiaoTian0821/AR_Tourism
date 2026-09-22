@@ -191,7 +191,7 @@ $requiresHTTPS = !isHTTPS() && strpos($_SERVER['HTTP_HOST'], 'localhost') === fa
         <h2 class="section-title">Scan to Start</h2>
         <p class="section-subtitle">Or scan this QR code with your phone camera</p>
         <div class="qr-code-inline" style="background: #fff; padding: 2rem; border-radius: 15px; display: inline-block; box-shadow: var(--shadow);">
-            <img src="<?php echo APP_URL; ?>/assets/images/qr-placeholder.svg" alt="QR Code" style="max-width: 200px;"
+            <img src="<?php echo APP_URL; ?>/assets/images/ar-qr-final.png" alt="QR Code for AR Experience" style="max-width: 200px;"
                  onerror="this.outerHTML='<div style=\'width:200px;height:200px;background:#e9ecef;display:flex;align-items:center;justify-content:center;border-radius:10px;\'><i class=\'fas fa-qrcode fa-3x text-muted\'></i></div>'">
             <p class="mt-2 small text-muted">Scan with your phone camera</p>
         </div>

@@ -43,7 +43,10 @@
                         <div class="qr-section">
                             <p class="small text-muted">Scan to start AR experience</p>
                             <div class="qr-code">
-                                <img src="<?php echo APP_URL; ?>/assets/images/qr-placeholder.svg" alt="QR Code for AR Experience" class="img-fluid" style="max-width: 120px;" onerror="this.style.display='none'">
+                                <img src="<?php echo APP_URL; ?>/assets/images/ar-qr-final.png"
+                                     alt="QR Code for AR Experience" 
+                                     class="img-fluid" 
+                                     style="max-width: 120px; background: white; padding: 5px; border-radius: 5px;">
                             </div>
                         </div>
                     </div>
