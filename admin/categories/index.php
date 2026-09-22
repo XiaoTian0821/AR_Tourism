@@ -107,21 +107,21 @@ $categories = dbQuery("SELECT *, (SELECT COUNT(*) FROM destinations WHERE catego
         <nav class="sidebar-nav">
             <div class="nav-section">
                 <span class="nav-section-title">Main</span>
-                <a href="index.php" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+                <a href="../index.php" class="nav-link"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
             </div>
             <div class="nav-section">
                 <span class="nav-section-title">Tourism</span>
-                <a href="destinations/index.php" class="nav-link"><i class="fas fa-landmark"></i><span>Destinations</span></a>
-                <a href="attractions/index.php" class="nav-link"><i class="fas fa-camera"></i><span>Attractions</span></a>
+                <a href="../destinations/index.php" class="nav-link"><i class="fas fa-landmark"></i><span>Destinations</span></a>
+                <a href="../attractions/index.php" class="nav-link"><i class="fas fa-camera"></i><span>Attractions</span></a>
                 <a href="index.php" class="nav-link active"><i class="fas fa-tags"></i><span>Categories</span></a>
             </div>
             <div class="nav-section">
                 <span class="nav-section-title">AR Management</span>
-                <a href="ar-posters/index.php" class="nav-link"><i class="fas fa-image"></i><span>AR Posters</span></a>
+                <a href="../ar-posters/index.php" class="nav-link"><i class="fas fa-image"></i><span>AR Posters</span></a>
             </div>
             <div class="sidebar-footer">
                 <a href="../../index.php" class="nav-link"><i class="fas fa-external-link-alt"></i><span>View Website</span></a>
-                <a href="logout.php" class="nav-link text-danger"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+                <a href="../logout.php" class="nav-link text-danger"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
             </div>
         </nav>
     </aside>

@@ -257,9 +257,9 @@ if (isset($_GET['edit'])) {
                             <label class="form-label">Poster Image *</label>
                             <input type="file" name="poster_image" class="form-control" accept="image/*" required>
                             <small class="text-muted">Upload a high-quality poster image (minimum 1000px for best AR recognition)</small>
-                            <?php if ($editPoster && $editPoster['poster_image']): ?>
+                            <?php if ($editPoster && $editPoster['poster_image'] && file_exists(UPLOAD_PATH . 'ar-posters/' . basename($editPoster['poster_image']))): ?>
                                 <div class="mt-2">
-                                    <img src="../../assets/uploads/ar-posters/<?php echo e($editPoster['poster_image']); ?>" 
+                                    <img src="../../assets/uploads/ar-posters/<?php echo rawurlencode(basename($editPoster['poster_image'])); ?>" 
                                          class="poster-preview" alt="Current poster">
                                     <br><small class="text-muted"><?php echo e($editPoster['poster_image']); ?></small>
                                 </div>
@@ -327,8 +327,8 @@ if (isset($_GET['edit'])) {
                                 <?php foreach ($posters as $poster): ?>
                                     <tr>
                                         <td>
-                                            <?php if ($poster['poster_image']): ?>
-                                                <img src="../../assets/uploads/ar-posters/<?php echo e($poster['poster_image']); ?>" 
+                                            <?php if ($poster['poster_image'] && file_exists(UPLOAD_PATH . 'ar-posters/' . basename($poster['poster_image']))): ?>
+                                                <img src="../../assets/uploads/ar-posters/<?php echo rawurlencode(basename($poster['poster_image'])); ?>" 
                                                      class="poster-preview" alt="<?php echo e($poster['name']); ?>"
                                                      onerror="this.style.display='none'">
                                             <?php else: ?>
