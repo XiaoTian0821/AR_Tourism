@@ -5,6 +5,8 @@
 $page_title = 'AR Posters';
 $body_class = 'admin-ar-posters';
 
+// require_once __DIR__ . '/../../includes/functions.php';
+require_once __DIR__ . '/../../includes/auth.php';
 require_once __DIR__ . '/../../includes/functions.php';
 requireAdmin();
 
@@ -184,7 +186,7 @@ if (isset($_GET['edit'])) {
             <div class="nav-section">
                 <span class="nav-section-title">AR Management</span>
                 <a href="index.php" class="nav-link active"><i class="fas fa-image"></i><span>AR Posters</span></a>
-                <a href="hotspots/index.php" class="nav-link"><i class="fas fa-map-marker-alt"></i><span>Hotspots</span></a>
+                <a href="../ar-hotspots/index.php" class="nav-link"><i class="fas fa-map-marker-alt"></i><span>Hotspots</span></a>
             </div>
             <div class="sidebar-footer">
                 <a href="../../index.php" class="nav-link"><i class="fas fa-external-link-alt"></i><span>View Website</span></a>
@@ -358,7 +360,7 @@ if (isset($_GET['edit'])) {
                                                 <a href="?edit=<?php echo e($poster['id']); ?>" class="btn btn-outline-primary" title="Edit">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
-                                                <a href="hotspots/index.php?poster_id=<?php echo e($poster['id']); ?>" class="btn btn-outline-info" title="Manage Hotspots">
+                                                <a href="../ar-hotspots/index.php?poster_id=<?php echo e($poster['id']); ?>" class="btn btn-outline-info" title="Manage Hotspots">
                                                     <i class="fas fa-map-marker-alt"></i>
                                                 </a>
                                                 <form method="POST" action="" class="d-inline" onsubmit="return confirm('Delete this AR poster?')">
