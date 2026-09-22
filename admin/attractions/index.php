@@ -5,7 +5,7 @@
 $page_title = 'Attractions';
 $body_class = 'admin-attractions';
 
-require_once __DIR__ . '/../../includes/auth.php';
+require_once __DIR__ . '/../../includes/functions.php';
 requireAdmin();
 
 $message = '';

@@ -5,7 +5,7 @@
 $page_title = 'AR Posters';
 $body_class = 'admin-ar-posters';
 
-require_once __DIR__ . '/../../includes/auth.php';
+require_once __DIR__ . '/../../includes/functions.php';
 requireAdmin();
 
 $message = '';
